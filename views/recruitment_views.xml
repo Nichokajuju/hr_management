@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_job_opening_list" model="ir.ui.view">
+        <field name="name">hr_mgmt.job_opening.list</field>
+        <field name="model">hr_mgmt.job_opening</field>
+        <field name="arch" type="xml">
+            <list string="Job Openings">
+                <field name="name"/>
+                <field name="department_id"/>
+                <field name="vacancies"/>
+                <field name="deadline"/>
+                <field name="state"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_job_opening_form" model="ir.ui.view">
+        <field name="name">hr_mgmt.job_opening.form</field>
+        <field name="model">hr_mgmt.job_opening</field>
+        <field name="arch" type="xml">
+            <form string="Job Opening">
+                <header>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="department_id"/>
+                        <field name="designation_id"/>
+                        <field name="vacancies"/>
+                        <field name="deadline"/>
+                    </group>
+                    <field name="description"/>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_job_opening" model="ir.actions.act_window">
+        <field name="name">Job Openings</field>
+        <field name="res_model">hr_mgmt.job_opening</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="view_candidate_list" model="ir.ui.view">
+        <field name="name">hr_mgmt.candidate.list</field>
+        <field name="model">hr_mgmt.candidate</field>
+        <field name="arch" type="xml">
+            <list string="Candidates">
+                <field name="name"/>
+                <field name="job_opening_id"/>
+                <field name="email"/>
+                <field name="phone"/>
+                <field name="state"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_candidate_form" model="ir.ui.view">
+        <field name="name">hr_mgmt.candidate.form</field>
+        <field name="model">hr_mgmt.candidate</field>
+        <field name="arch" type="xml">
+            <form string="Candidate">
+                <header>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="email"/>
+                        <field name="phone"/>
+                        <field name="job_opening_id"/>
+                        <field name="resume" filename="resume_filename"/>
+                        <field name="resume_filename" invisible="1"/>
+                    </group>
+                    <field name="notes"/>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_candidate" model="ir.actions.act_window">
+        <field name="name">Candidates</field>
+        <field name="res_model">hr_mgmt.candidate</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="view_offer_letter_list" model="ir.ui.view">
+        <field name="name">hr_mgmt.offer_letter.list</field>
+        <field name="model">hr_mgmt.offer_letter</field>
+        <field name="arch" type="xml">
+            <list string="Offer Letters">
+                <field name="candidate_id"/>
+                <field name="job_opening_id"/>
+                <field name="offer_date"/>
+                <field name="offered_salary"/>
+                <field name="state"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_offer_letter_form" model="ir.ui.view">
+        <field name="name">hr_mgmt.offer_letter.form</field>
+        <field name="model">hr_mgmt.offer_letter</field>
+        <field name="arch" type="xml">
+            <form string="Offer Letter">
+                <header>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="candidate_id"/>
+                        <field name="job_opening_id"/>
+                        <field name="offer_date"/>
+                        <field name="joining_date"/>
+                        <field name="offered_salary"/>
+                    </group>
+                    <field name="notes"/>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_offer_letter" model="ir.actions.act_window">
+        <field name="name">Offer Letters</field>
+        <field name="res_model">hr_mgmt.offer_letter</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

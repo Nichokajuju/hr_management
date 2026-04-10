@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_employment_detail_list" model="ir.ui.view">
+        <field name="name">hr_mgmt.employment_detail.list</field>
+        <field name="model">hr_mgmt.employment_detail</field>
+        <field name="arch" type="xml">
+            <list string="Employment Details">
+                <field name="employee_id"/>
+                <field name="contract_type"/>
+                <field name="date_joined"/>
+                <field name="end_date"/>
+                <field name="salary"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_employment_detail_form" model="ir.ui.view">
+        <field name="name">hr_mgmt.employment_detail.form</field>
+        <field name="model">hr_mgmt.employment_detail</field>
+        <field name="arch" type="xml">
+            <form string="Employment Detail">
+                <sheet>
+                    <group>
+                        <field name="employee_id"/>
+                        <field name="contract_type"/>
+                        <field name="date_joined"/>
+                        <field name="end_date"/>
+                        <field name="probation_end"/>
+                        <field name="salary"/>
+                        <field name="bank_account"/>
+                        <field name="active"/>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_employment_detail" model="ir.actions.act_window">
+        <field name="name">Employment Details</field>
+        <field name="res_model">hr_mgmt.employment_detail</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

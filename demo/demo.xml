@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="demo_department_tech" model="hr_mgmt.department">
+        <field name="name">Technology</field>
+        <field name="code">TECH</field>
+    </record>
+
+    <record id="demo_department_hr" model="hr_mgmt.department">
+        <field name="name">Human Resources</field>
+        <field name="code">HR</field>
+    </record>
+
+    <record id="demo_designation_dev" model="hr_mgmt.designation">
+        <field name="name">Software Developer</field>
+        <field name="department_id" ref="demo_department_tech"/>
+    </record>
+
+    <record id="demo_designation_hr" model="hr_mgmt.designation">
+        <field name="name">HR Officer</field>
+        <field name="department_id" ref="demo_department_hr"/>
+    </record>
+
+    <record id="demo_location_hq" model="hr_mgmt.work_location">
+        <field name="name">Head Office - Nairobi</field>
+        <field name="address">Westlands, Nairobi, Kenya</field>
+    </record>
+
+    <record id="demo_leave_type_annual" model="hr_mgmt.leave_type">
+        <field name="name">Annual Leave</field>
+        <field name="max_days">21</field>
+    </record>
+
+    <record id="demo_leave_type_sick" model="hr_mgmt.leave_type">
+        <field name="name">Sick Leave</field>
+        <field name="max_days">10</field>
+    </record>
+
+    <record id="demo_salary_structure" model="hr_mgmt.salary_structure">
+        <field name="name">Standard Structure</field>
+        <field name="basic_salary">80000</field>
+        <field name="housing_allowance">15000</field>
+        <field name="transport_allowance">5000</field>
+        <field name="tax_deduction">12000</field>
+    </record>
+</odoo>
