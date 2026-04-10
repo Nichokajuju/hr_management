@@ -93,41 +93,6 @@ cd ~/odoo18/odoo
 
 ---
 
-## Module Structure
-hr_management/
-├── init.py
-├── manifest.py
-├── demo/
-│   └── demo.xml
-├── models/
-│   ├── init.py
-│   ├── attendance.py
-│   ├── department.py
-│   ├── designation.py
-│   ├── document.py
-│   ├── employee.py
-│   ├── employment_detail.py
-│   ├── leave.py
-│   ├── payroll.py
-│   ├── performance.py
-│   ├── recruitment.py
-│   └── work_location.py
-├── security/
-│   └── ir.model.access.csv
-└── views/
-├── attendance_views.xml
-├── department_views.xml
-├── designation_views.xml
-├── document_views.xml
-├── employee_views.xml
-├── employment_detail_views.xml
-├── leave_views.xml
-├── menu.xml
-├── payroll_views.xml
-├── performance_views.xml
-├── recruitment_views.xml
-├── sequence.xml
-└── work_location_views.xml
 ---
 
 ## Author
