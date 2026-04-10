@@ -132,6 +132,6 @@ hr_management/
 
 ## Author
 
-**Muller Miles**  
+**Mutembei Nicholas**  
 Odoo Developer  
 Built with Odoo 18 | Python 3.12 | PostgreSQL
