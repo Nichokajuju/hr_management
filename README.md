@@ -7,7 +7,7 @@ A full-featured Human Resources Management module built for Odoo 18, covering th
 ## Features
 
 ### Core Employee Lifecycle
-- Employee profiles with auto-generated IDs (`EMP0001`, `EMP0002`, ...)
+- Employee profiles with auto-generated IDs (`EMP001`, `EMP0002`, ...)
 - Age auto-computed from date of birth
 - Employment detail tracking per employee (contract type, salary, probation dates)
 
